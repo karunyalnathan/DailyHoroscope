@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/horoscope_container"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:visibility="visible"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/horoscope_current_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="@style/TextAppearance.Headline5"
+        style="@style/dhCell.center"
+        android:text="December 23, 2020" />
+
+
+    <ImageView
+        android:id="@+id/horoscope_signImage"
+        android:layout_width="305dp"
+        android:layout_height="299dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:src="@drawable/icon_symbol_scorpio_scorpion"
+        android:tint="#36496f"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horoscope_current_date" />
+
+    <TextView android:id="@+id/horoscope_signName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horoscope_signImage"
+        android:textAppearance="@style/TextAppearance.Headline2"
+        style="@style/dhCell.center"
+        android:paddingBottom="0dp"
+        android:text="Scorpio"/>
+    <TextView
+        android:id="@+id/horoscope_signDateRange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horoscope_signName"
+        android:textAppearance="@style/TextAppearance.Caption"
+        style="@style/dhCell.center"
+        android:paddingTop="0dp"
+        android:text="Oct 23 - Nov 22"
+        />
+
+
+
+    <TextView
+        android:id="@+id/horoscopeDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horoscope_signDateRange"
+        android:textAppearance="@style/TextAppearance.Body1"
+        android:letterSpacing="0.04"
+        style="@style/dhCell"
+        android:text="Reevaluate your methods for dealing with arguments and decide to be compassionate."/>
+
+    <com.kln.dailyhoroscope.DHRow
+        android:id="@+id/horoscopeCompatibility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelText="@string/horoscopeCompatibilityLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horoscopeDescription"
+        android:layout_marginStart="@dimen/inline_space"
+        android:layout_marginEnd="@dimen/inline_space"
+        app:useTableStyle="true"
+        app:isTopRow="true"
+        app:valueText="Libra"/>
+
+    <com.kln.dailyhoroscope.DHRow
+        android:id="@+id/horoscopeMood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelText="@string/horoscopeMoodLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horoscopeCompatibility"
+        android:layout_marginStart="@dimen/inline_space"
+        android:layout_marginEnd="@dimen/inline_space"
+        app:useTableStyle="true"
+        app:isTopRow="false"
+        app:valueText="Relaxed"/>
+
+    <com.kln.dailyhoroscope.DHRow
+        android:id="@+id/horoscopeColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelText="@string/horoscopeColorLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horoscopeMood"
+        android:layout_marginStart="@dimen/inline_space"
+        android:layout_marginEnd="@dimen/inline_space"
+        app:useTableStyle="true"
+        app:isTopRow="false"
+        app:valueText="Brown"/>
+
+    <com.kln.dailyhoroscope.DHRow
+        android:id="@+id/horoscopeLuckyNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelText="@string/horoscopeLuckyNumberLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horoscopeColor"
+        android:layout_marginStart="@dimen/inline_space"
+        android:layout_marginEnd="@dimen/inline_space"
+        app:useTableStyle="true"
+        app:isTopRow="false"
+        app:valueText="10"/>
+
+    <com.kln.dailyhoroscope.DHRow
+        android:id="@+id/horoscopeLuckyTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:labelText="@string/horoscopeLuckyTimeLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horoscopeLuckyNumber"
+        android:layout_marginStart="@dimen/inline_space"
+        android:layout_marginEnd="@dimen/inline_space"
+        app:useTableStyle="true"
+        app:isTopRow="false"
+        app:valueText="12am"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

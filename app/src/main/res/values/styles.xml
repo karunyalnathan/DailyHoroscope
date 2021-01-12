@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextAppearance.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="fontFamily">sans-serif-condensed-light</item>
+        <item name="android:fontFamily">sans-serif-condensed-light</item>
+        <item name="android:textSize">52sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="TextAppearance.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="android:textSize">42sp</item>
+        <item name="android:textColor">@color/secondaryLight</item>
+        <item name="fontFamily">sans-serif-condensed-light</item>
+        <item name="android:fontFamily">sans-serif-condensed-light</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Headline3" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="android:textSize">42sp</item>
+        <item name="android:textColor">@color/secondaryLight</item>
+    </style>
+    <style name="TextAppearance.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">sans-serif-condensed</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/secondary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">sans-serif-condensed-light</item>
+        <item name="android:fontFamily">sans-serif-condensed-light</item>
+        <item name="android:textColor">@color/secondaryLight</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="TextAppearance.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">sans-serif-condensed</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@color/primary900</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+
+    </style>
+    <style name="TextAppearance.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">sans-serif-condensed</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@color/secondaryLight</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textStyle">italic</item>
+
+    </style>
+    <style name="TextAppearance.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">sans-serif-condensed</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@color/secondary</item>
+    </style>
+
+    <style name="TextAppearance.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">sans-serif-condensed</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@color/primary100</item>
+    </style>
+
+
+    <style name="dhCell">
+        <item name="android:paddingStart">@dimen/inline_space</item>
+        <item name="android:paddingEnd">@dimen/inline_space</item>
+        <item name="android:paddingTop">@dimen/stacked_space</item>
+        <item name="android:paddingBottom">@dimen/stacked_space</item>
+    </style>
+
+    <style name="dhCell.narrow">
+        <item name="android:paddingStart">@dimen/inline_narrow_space</item>
+        <item name="android:paddingEnd">@dimen/inline_narrow_space</item>
+        <item name="android:paddingTop">@dimen/stacked_narrow_space</item>
+        <item name="android:paddingBottom">@dimen/stacked_narrow_space</item>
+    </style>
+
+    <style name="dhCell.center">
+        <item name="android:paddingStart">@dimen/inline_narrow_space</item>
+        <item name="android:paddingEnd">@dimen/inline_narrow_space</item>
+        <item name="android:paddingTop">@dimen/stacked_narrow_space</item>
+        <item name="android:paddingBottom">@dimen/stacked_narrow_space</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="table">
+        <item name="android:layout_marginStart">@dimen/inline_space</item>
+        <item name="android:layout_marginEnd">@dimen/inline_space</item>
+        <item name="android:background">@drawable/table_bottom_firstcolumn</item>
+    </style>
+
+
+    <style name="cheffed.style.segmentedControl" parent="Widget.MaterialComponents.TabLayout">
+        <item name="enforceMaterialTheme">false</item>
+        <item name="enforceTextAppearance">false</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:background">@drawable/segmented_control_background</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabBackground">@drawable/segmented_control_selector</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabTextColor">@color/white</item>
+        <item name="tabSelectedTextColor">@color/primary900</item>
+        <item name="tabTextAppearance">@style/cheffed.textAppearance.segmentedControl</item>
+        <item name="tabIconTint">@color/primary900</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabPaddingStart">0dp</item>
+        <item name="tabPaddingEnd">0dp</item>
+        <item name="tabPaddingTop">0dp</item>
+        <item name="tabPaddingBottom">0dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="tabRippleColor">@android:color/transparent</item>
+    </style>
+
+    <style name="cheffed.textAppearance.segmentedControl" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+</resources>

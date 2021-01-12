@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/horoscopeDayTabLayout"
+            style="@style/cheffed.style.segmentedControl"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/horoscopeDayViewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_anchorGravity="center"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+       <!-- <include
+            layout="@layout/content_main"
+            app:layout_anchor="@+id/linearLayout"
+            app:layout_anchorGravity="center"
+            tools:visibility="gone"/>-->
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/welcomeBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="434dp"
+        android:layout_gravity="top|end"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_saturn"
+        android:tint="#12182d" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/welcomeTextView"
+        style="@style/dhCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="210dp"
+        android:text="@string/welcome"
+        android:textAppearance="@style/TextAppearance.Headline1"
+        android:textStyle="bold"
+        android:textColor="@color/secondaryLight"
+        android:textSize="75sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/welcomeInstructionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="50dp"
+        android:textAppearance="@style/TextAppearance.Headline4"
+        android:textColor="#509cd1"
+        style="@style/dhCell"
+        android:layout_marginBottom="120dp"
+        android:layout_gravity="bottom|end"
+        android:text="@string/welcomeInstructions"/>
+
+    <ImageView
+        android:id="@+id/welcomeInstructionArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_diagonal_arrow"
+        android:tint="#56abe7"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="75dp"
+        android:layout_marginEnd="80dp"
+        />
+
+    <com.google.android.material.circularreveal.CircularRevealFrameLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/sheet"
+        android:visibility="invisible"
+        android:background="@color/secondary"
+        app:layout_behavior="com.google.android.material.transformation.FabTransformationSheetBehavior">
+        <include layout="@layout/zodiac_selector"/>
+    </com.google.android.material.circularreveal.CircularRevealFrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:maxImageSize="40dp"
+        app:srcCompat="@drawable/icon_constellations" />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
